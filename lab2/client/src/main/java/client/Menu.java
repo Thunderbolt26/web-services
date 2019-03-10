@@ -1,7 +1,7 @@
 package client;
 
-import client.generated.Person;
-import client.generated.PersonService;
+import client.generated.FootballClub;
+import client.generated.FootballClubService;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -53,11 +53,11 @@ public class Menu {
             String type = input.readLine();
             switch (type) {
                 case "1":
-                    url = new URL("http://localhost:8080/PersonService/?wsdl");
+                    url = new URL("http://localhost:8080/FootballClubService/?wsdl");
                     crudMenu();
                     break;
                 case "2":
-                    url = new URL("http://localhost:8080/javaee/PersonService?wsdl");
+                    url = new URL("http://localhost:8080/javaee/FootballClubService?wsdl");
                     crudMenu();
                     break;
                 case "3":
@@ -73,25 +73,25 @@ public class Menu {
         boolean flag = true;
         System.out.println("Choose one of service");
         while (flag) {
-            System.out.println("1. Add person");
-            System.out.println("2. Update person");
-            System.out.println("3. Delete person");
-            System.out.println("4. Find persons");
+            System.out.println("1. Add football club");
+            System.out.println("2. Update football club");
+            System.out.println("3. Delete football club");
+            System.out.println("4. Find football clubs");
             System.out.println("5. Exit");
             System.out.print("Print number: ");
             String type = input.readLine();
             switch (type) {
                 case "1":
-                    addPersonMenu();
+                    addFootballClubMenu();
                     break;
                 case "2":
-                    updatePersonMenu();
+                    updateFootballClubMenu();
                     break;
                 case "3":
-                    deletePersonMenu();
+                    deleteFootballClubMenu();
                     break;
                 case "4":
-                    findPersonMenu();
+                    findFootballClubMenu();
                     break;
                 case "5":
                     flag = false;
@@ -102,22 +102,22 @@ public class Menu {
         }
     }
 
-    private void addPersonMenu() throws IOException {
+    private void addFootballClubMenu() throws IOException {
         boolean flag = true;
 
         Integer id = null, age = null;
-        String name = null, surname = null, patronymic = null;
-        System.out.println("===Add person===");
+        String name = null, country = null, city = null;
+        System.out.println("===Add football club===");
         while (flag) {
             age = null;
             name = null;
-            surname = null;
-            patronymic = null;
+            country = null;
+            city = null;
             flag = false;
 
-            System.out.println("Write values for fields: name, surname, patronymic, age)");
+            System.out.println("Write values for fields: name, country, city, age)");
             System.out.println("Format: key=value[,key=value]|[ENTER]");
-            System.out.println("Example: name=Иван,surname=Иванов,patronymic=Иванович,age=10");
+            System.out.println("Example: name=FC Zenit,country=Russia,city=SPB,age=60");
 
             String filter = input.readLine();
             if (filter.equals("")) break;
@@ -134,11 +134,11 @@ public class Menu {
                     case "name":
                         name = fieldvalue[1];
                         break;
-                    case "surname":
-                        surname = fieldvalue[1];
+                    case "country":
+                        country = fieldvalue[1];
                         break;
-                    case "patronymic":
-                        patronymic = fieldvalue[1];
+                    case "city":
+                        city = fieldvalue[1];
                         break;
                     case "age":
                         try {
@@ -155,13 +155,13 @@ public class Menu {
                 }
             }
         }
-        PersonService personService = new PersonService(url);
-        System.out.println("params: name: " + name + ", surname: " + surname + ", patronymic: " + patronymic + ", age: " + age);
+        FootballClubService footballService = new FootballClubService(url);
+        System.out.println("params: name: " + name + ", country: " + country + ", city: " + city + ", age: " + age);
 
-        id = personService.getPersonWebServicePort().addPersons(name, surname, patronymic, age);
+        id = footballService.getFootballClubWebServicePort().addFootballClub(name, country, city, age);
         System.out.println("============Result===========");
         if (id >= 0)
-            System.out.println("New person's id: " + id);
+            System.out.println("New football club's id: " + id);
         else if (id == -2)
             System.out.println("Args can not be null");
         else
@@ -172,7 +172,7 @@ public class Menu {
         Integer id = null;
         boolean flag = true;
         while (flag) {
-            System.out.println("===Enter id of person===");
+            System.out.println("===Enter id of football club===");
             String s = input.readLine();
             flag = false;
             try {
@@ -185,23 +185,23 @@ public class Menu {
         return id;
     }
 
-    private void updatePersonMenu() throws IOException {
+    private void updateFootballClubMenu() throws IOException {
         boolean flag = true;
 
         Integer id = null, age = null;
-        String name = null, surname = null, patronymic = null;
-        System.out.println("===Update person===");
+        String name = null, country = null, city = null;
+        System.out.println("===Update football club===");
         id = readId();
         while (flag) {
             age = null;
             name = null;
-            surname = null;
-            patronymic = null;
+            country = null;
+            city = null;
             flag = false;
 
-            System.out.println("Write new values for fields: name, surname, patronymic, age)");
+            System.out.println("Write new values for fields: name, country, city, age)");
             System.out.println("Format: key=value[,key=value]|[ENTER]");
-            System.out.println("Example: name=Иван,surname=Иванов");
+            System.out.println("Example: name=FC Zenit,country=Russia");
 
             String filter = input.readLine();
             if (filter.equals("")) break;
@@ -218,11 +218,11 @@ public class Menu {
                     case "name":
                         name = fieldvalue[1];
                         break;
-                    case "surname":
-                        surname = fieldvalue[1];
+                    case "country":
+                        country = fieldvalue[1];
                         break;
-                    case "patronymic":
-                        patronymic = fieldvalue[1];
+                    case "city":
+                        city = fieldvalue[1];
                         break;
                     case "age":
                         try {
@@ -239,9 +239,9 @@ public class Menu {
                 }
             }
         }
-        PersonService personService = new PersonService(url);
+        FootballClubService footballClubService = new FootballClubService(url);
 
-        Integer status = personService.getPersonWebServicePort().updatePerson(id, name, surname, patronymic, age);
+        Integer status = footballClubService.getFootballClubWebServicePort().updateFootballClub(id, name, country, city, age);
         System.out.println("============Result===========");
         if (status != null)
             readStatus(status);
@@ -249,13 +249,13 @@ public class Menu {
             System.out.println("Operation failed");
     }
 
-    private void deletePersonMenu() throws IOException {
+    private void deleteFootballClubMenu() throws IOException {
         Integer id = null;
-        System.out.println("===Delete person===");
+        System.out.println("===Delete football club===");
         id = readId();
 
-        PersonService personService = new PersonService(url);
-        Integer status = personService.getPersonWebServicePort().deletePerson(id);
+        FootballClubService footballClubService = new FootballClubService(url);
+        Integer status = footballClubService.getFootballClubWebServicePort().deleteFootballClub(id);
         System.out.println("============Result===========");
         if (status != null)
             readStatus(status);
@@ -264,23 +264,23 @@ public class Menu {
     }
 
 
-    private void findPersonMenu() throws IOException {
+    private void findFootballClubMenu() throws IOException {
         boolean flag = true;
 
         Integer id = null, age = null;
-        String name = null, surname = null, patronymic = null;
-        System.out.println("===Find persons===");
+        String name = null, country = null, city = null;
+        System.out.println("===Find football clubs===");
         while (flag) {
             id = null;
             age = null;
             name = null;
-            surname = null;
-            patronymic = null;
+            country = null;
+            city = null;
             flag = false;
 
-            System.out.println("Write your filter for fields: id, name, surname, patronymic, age)");
+            System.out.println("Write your filter for fields: id, name, country, city, age)");
             System.out.println("Format: key=value[,key=value]|[ENTER]");
-            System.out.println("Example: name=Даниил,surname=Богомолов");
+            System.out.println("Example: name=FC Zenit,country=Russia");
 
             String filter = input.readLine();
             if (filter.equals("")) break;
@@ -305,11 +305,11 @@ public class Menu {
                     case "name":
                         name = fieldvalue[1];
                         break;
-                    case "surname":
-                        surname = fieldvalue[1];
+                    case "country":
+                        country = fieldvalue[1];
                         break;
-                    case "patronymic":
-                        patronymic = fieldvalue[1];
+                    case "city":
+                        city = fieldvalue[1];
                         break;
                     case "age":
                         try {
@@ -326,15 +326,15 @@ public class Menu {
                 }
             }
         }
-        PersonService personService = new PersonService(url);
+        FootballClubService footballClubService = new FootballClubService(url);
 
-        List<Person> persons = personService.getPersonWebServicePort().getPersonsByFilter(id, name, surname, patronymic, age);
+        List<FootballClub> footballClubs = footballClubService.getFootballClubWebServicePort().getFootballClubsByFilter(id, name, country, city, age);
 
-        //System.out.println("id: " + id + ", name: " + name + ", surname: " + surname + ", patronymic: " + patronymic + ", age: " + age);
+        //System.out.println("id: " + id + ", name: " + name + ", country: " + country + ", city: " + city + ", age: " + age);
         System.out.println("============Result===========");
-        for (Person person : persons) {
-            System.out.println("id: " + person.getId() + ", name: " + person.getName() + ", surname: " + person.getSurname() + ", patronymic: " + person.getPatronymic() + ", age: " + person.getAge());
+        for (FootballClub footballClub : footballClubs) {
+            System.out.println("id: " + footballClub.getId() + ", name: " + footballClub.getName() + ", country: " + footballClub.getCountry() + ", city: " + footballClub.getCity() + ", age: " + footballClub.getAge());
         }
-        System.out.println("Total persons: " + persons.size());
+        System.out.println("Total football clubs: " + footballClubs.size());
     }
 }

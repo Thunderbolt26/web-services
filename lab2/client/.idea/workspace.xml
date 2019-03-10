@@ -2,10 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf6e9d5b-d024-4e52-bdeb-aba63ef0a31a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/client/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../standalone/service/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lab1/client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab1/client/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lab1/javaee/service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab1/javaee/service/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lab1/standalone/service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab1/standalone/service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/WebServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/WebServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/generated/AddPersons.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/generated/AddPersons.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/generated/AddPersonsResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/generated/AddPersonsResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/generated/DeletePerson.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/generated/DeletePerson.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/generated/DeletePersonResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/generated/DeletePersonResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/generated/GetPersonsByFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/generated/GetPersonsByFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/generated/GetPersonsByFilterResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/generated/GetPersonsByFilterResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/generated/ObjectFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/generated/ObjectFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/generated/ObjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/generated/ObjectFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/generated/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/generated/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/generated/PersonService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/generated/PersonService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/generated/PersonWebService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/generated/PersonWebService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/generated/UpdatePerson.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/generated/UpdatePerson.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/generated/UpdatePersonResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/generated/UpdatePersonResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../standalone/service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../standalone/service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../standalone/service/src/main/java/service/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../standalone/service/src/main/java/service/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../standalone/service/src/main/java/service/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../standalone/service/src/main/java/service/FootballClub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../standalone/service/src/main/java/service/PersonWebService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../standalone/service/src/main/java/service/FootballClubWebService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../standalone/service/src/main/java/service/PostgreSQLDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../standalone/service/src/main/java/service/PostgreSQLDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../standalone/service/target/classes/service/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../standalone/service/target/classes/service/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../standalone/service/target/classes/service/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../standalone/service/target/classes/service/PersonWebService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../standalone/service/target/classes/service/PostgreSQLDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../standalone/service/target/classes/service/PostgreSQLDAO.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,9 +55,10 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -40,13 +77,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1426" />
+          <entry key="java" value="1544" />
           <entry key="xml" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1426" />
+          <entry key="JAVA" value="1544" />
           <entry key="XML" value="32" />
         </counts>
       </usages-collector>
@@ -67,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/client/WebServiceClient.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,8 +115,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/client/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="247" column="12" lean-forward="true" selection-start-line="247" selection-start-column="12" selection-end-line="247" selection-end-column="12" />
+            <state relative-caret-position="2519">
+              <caret line="337" column="44" selection-start-line="337" selection-start-column="44" selection-end-line="337" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#again#0;class#Menu#0" />
@@ -91,7 +128,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://D:/Downloads/jdk18/src.zip!/java/lang/Integer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="9860">
               <caret line="613" column="69" selection-start-line="613" selection-start-column="48" selection-end-line="613" selection-end-column="69" />
               <folding>
                 <element signature="e#37816#37817#0" expanded="true" />
@@ -104,7 +141,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://D:/Downloads/jdk18/src.zip!/java/lang/NumberFormatException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
+            <state relative-caret-position="238">
               <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
             </state>
           </provider>
@@ -113,7 +150,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://D:/Downloads/jdk18/src.zip!/java/lang/IllegalArgumentException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
+            <state relative-caret-position="204">
               <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
             </state>
           </provider>
@@ -127,6 +164,25 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>surname</find>
+      <find>patronymic</find>
+      <find>Даниил</find>
+      <find>Russia</find>
+      <find>Богомолов</find>
+      <find>FC Zeint</find>
+      <find>Иван</find>
+      <find>person</find>
+      <find>Person</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>city</replace>
+      <replace>FC Zenit</replace>
+      <replace>football</replace>
+      <replace>FootballClub</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -157,10 +213,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="width" value="977" />
-    <option name="height" value="1088" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-9" />
+    <option name="width" value="978" />
+    <option name="height" value="1089" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -168,6 +224,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
@@ -216,7 +273,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -271,9 +327,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="781" height="870" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25838926" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25838926" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -342,10 +399,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
           <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
-          <folding>
-            <element signature="e#1342#1343#0" expanded="true" />
-            <element signature="e#1415#1416#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -356,23 +409,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Downloads/jdk18/src.zip!/java/lang/NumberFormatException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Downloads/jdk18/src.zip!/java/lang/IllegalArgumentException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/Downloads/jdk18/src.zip!/java/lang/Integer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
+        <state relative-caret-position="9860">
           <caret line="613" column="69" selection-start-line="613" selection-start-column="48" selection-end-line="613" selection-end-column="69" />
           <folding>
             <element signature="e#37816#37817#0" expanded="true" />
@@ -381,10 +420,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://D:/Downloads/jdk18/src.zip!/java/lang/NumberFormatException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Downloads/jdk18/src.zip!/java/lang/IllegalArgumentException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/client/WebServiceClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -393,8 +446,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/client/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="247" column="12" lean-forward="true" selection-start-line="247" selection-start-column="12" selection-end-line="247" selection-end-column="12" />
+        <state relative-caret-position="2519">
+          <caret line="337" column="44" selection-start-line="337" selection-start-column="44" selection-end-line="337" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#again#0;class#Menu#0" />

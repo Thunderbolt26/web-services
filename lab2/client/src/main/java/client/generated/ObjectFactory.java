@@ -24,14 +24,14 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _GetPersonsByFilterResponse_QNAME = new QName("http://service/", "getPersonsByFilterResponse");
-    private final static QName _AddPersonsResponse_QNAME = new QName("http://service/", "addPersonsResponse");
-    private final static QName _DeletePersonResponse_QNAME = new QName("http://service/", "deletePersonResponse");
-    private final static QName _UpdatePersonResponse_QNAME = new QName("http://service/", "updatePersonResponse");
-    private final static QName _AddPersons_QNAME = new QName("http://service/", "addPersons");
-    private final static QName _DeletePerson_QNAME = new QName("http://service/", "deletePerson");
-    private final static QName _GetPersonsByFilter_QNAME = new QName("http://service/", "getPersonsByFilter");
-    private final static QName _UpdatePerson_QNAME = new QName("http://service/", "updatePerson");
+    private final static QName _AddFootballClubResponse_QNAME = new QName("http://service/", "addFootballClubResponse");
+    private final static QName _DeleteFootballClubResponse_QNAME = new QName("http://service/", "deleteFootballClubResponse");
+    private final static QName _GetFootballClubsByFilter_QNAME = new QName("http://service/", "getFootballClubsByFilter");
+    private final static QName _DeleteFootballClub_QNAME = new QName("http://service/", "deleteFootballClub");
+    private final static QName _GetFootballClubsByFilterResponse_QNAME = new QName("http://service/", "getFootballClubsByFilterResponse");
+    private final static QName _AddFootballClub_QNAME = new QName("http://service/", "addFootballClub");
+    private final static QName _UpdateFootballClub_QNAME = new QName("http://service/", "updateFootballClub");
+    private final static QName _UpdateFootballClubResponse_QNAME = new QName("http://service/", "updateFootballClubResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: client.generated
@@ -41,147 +41,147 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AddPersons }
+     * Create an instance of {@link GetFootballClubsByFilter }
      * 
      */
-    public AddPersons createAddPersons() {
-        return new AddPersons();
+    public GetFootballClubsByFilter createGetFootballClubsByFilter() {
+        return new GetFootballClubsByFilter();
     }
 
     /**
-     * Create an instance of {@link DeletePerson }
+     * Create an instance of {@link DeleteFootballClubResponse }
      * 
      */
-    public DeletePerson createDeletePerson() {
-        return new DeletePerson();
+    public DeleteFootballClubResponse createDeleteFootballClubResponse() {
+        return new DeleteFootballClubResponse();
     }
 
     /**
-     * Create an instance of {@link UpdatePersonResponse }
+     * Create an instance of {@link AddFootballClubResponse }
      * 
      */
-    public UpdatePersonResponse createUpdatePersonResponse() {
-        return new UpdatePersonResponse();
+    public AddFootballClubResponse createAddFootballClubResponse() {
+        return new AddFootballClubResponse();
     }
 
     /**
-     * Create an instance of {@link DeletePersonResponse }
+     * Create an instance of {@link UpdateFootballClubResponse }
      * 
      */
-    public DeletePersonResponse createDeletePersonResponse() {
-        return new DeletePersonResponse();
+    public UpdateFootballClubResponse createUpdateFootballClubResponse() {
+        return new UpdateFootballClubResponse();
     }
 
     /**
-     * Create an instance of {@link AddPersonsResponse }
+     * Create an instance of {@link AddFootballClub }
      * 
      */
-    public AddPersonsResponse createAddPersonsResponse() {
-        return new AddPersonsResponse();
+    public AddFootballClub createAddFootballClub() {
+        return new AddFootballClub();
     }
 
     /**
-     * Create an instance of {@link GetPersonsByFilterResponse }
+     * Create an instance of {@link UpdateFootballClub }
      * 
      */
-    public GetPersonsByFilterResponse createGetPersonsByFilterResponse() {
-        return new GetPersonsByFilterResponse();
+    public UpdateFootballClub createUpdateFootballClub() {
+        return new UpdateFootballClub();
     }
 
     /**
-     * Create an instance of {@link GetPersonsByFilter }
+     * Create an instance of {@link DeleteFootballClub }
      * 
      */
-    public GetPersonsByFilter createGetPersonsByFilter() {
-        return new GetPersonsByFilter();
+    public DeleteFootballClub createDeleteFootballClub() {
+        return new DeleteFootballClub();
     }
 
     /**
-     * Create an instance of {@link UpdatePerson }
+     * Create an instance of {@link GetFootballClubsByFilterResponse }
      * 
      */
-    public UpdatePerson createUpdatePerson() {
-        return new UpdatePerson();
+    public GetFootballClubsByFilterResponse createGetFootballClubsByFilterResponse() {
+        return new GetFootballClubsByFilterResponse();
     }
 
     /**
-     * Create an instance of {@link Person }
+     * Create an instance of {@link FootballClub }
      * 
      */
-    public Person createPerson() {
-        return new Person();
+    public FootballClub createFootballClub() {
+        return new FootballClub();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetPersonsByFilterResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddFootballClubResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "getPersonsByFilterResponse")
-    public JAXBElement<GetPersonsByFilterResponse> createGetPersonsByFilterResponse(GetPersonsByFilterResponse value) {
-        return new JAXBElement<GetPersonsByFilterResponse>(_GetPersonsByFilterResponse_QNAME, GetPersonsByFilterResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "addFootballClubResponse")
+    public JAXBElement<AddFootballClubResponse> createAddFootballClubResponse(AddFootballClubResponse value) {
+        return new JAXBElement<AddFootballClubResponse>(_AddFootballClubResponse_QNAME, AddFootballClubResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddPersonsResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteFootballClubResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "addPersonsResponse")
-    public JAXBElement<AddPersonsResponse> createAddPersonsResponse(AddPersonsResponse value) {
-        return new JAXBElement<AddPersonsResponse>(_AddPersonsResponse_QNAME, AddPersonsResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "deleteFootballClubResponse")
+    public JAXBElement<DeleteFootballClubResponse> createDeleteFootballClubResponse(DeleteFootballClubResponse value) {
+        return new JAXBElement<DeleteFootballClubResponse>(_DeleteFootballClubResponse_QNAME, DeleteFootballClubResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DeletePersonResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetFootballClubsByFilter }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "deletePersonResponse")
-    public JAXBElement<DeletePersonResponse> createDeletePersonResponse(DeletePersonResponse value) {
-        return new JAXBElement<DeletePersonResponse>(_DeletePersonResponse_QNAME, DeletePersonResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "getFootballClubsByFilter")
+    public JAXBElement<GetFootballClubsByFilter> createGetFootballClubsByFilter(GetFootballClubsByFilter value) {
+        return new JAXBElement<GetFootballClubsByFilter>(_GetFootballClubsByFilter_QNAME, GetFootballClubsByFilter.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UpdatePersonResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteFootballClub }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "updatePersonResponse")
-    public JAXBElement<UpdatePersonResponse> createUpdatePersonResponse(UpdatePersonResponse value) {
-        return new JAXBElement<UpdatePersonResponse>(_UpdatePersonResponse_QNAME, UpdatePersonResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "deleteFootballClub")
+    public JAXBElement<DeleteFootballClub> createDeleteFootballClub(DeleteFootballClub value) {
+        return new JAXBElement<DeleteFootballClub>(_DeleteFootballClub_QNAME, DeleteFootballClub.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddPersons }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetFootballClubsByFilterResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "addPersons")
-    public JAXBElement<AddPersons> createAddPersons(AddPersons value) {
-        return new JAXBElement<AddPersons>(_AddPersons_QNAME, AddPersons.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "getFootballClubsByFilterResponse")
+    public JAXBElement<GetFootballClubsByFilterResponse> createGetFootballClubsByFilterResponse(GetFootballClubsByFilterResponse value) {
+        return new JAXBElement<GetFootballClubsByFilterResponse>(_GetFootballClubsByFilterResponse_QNAME, GetFootballClubsByFilterResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DeletePerson }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddFootballClub }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "deletePerson")
-    public JAXBElement<DeletePerson> createDeletePerson(DeletePerson value) {
-        return new JAXBElement<DeletePerson>(_DeletePerson_QNAME, DeletePerson.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "addFootballClub")
+    public JAXBElement<AddFootballClub> createAddFootballClub(AddFootballClub value) {
+        return new JAXBElement<AddFootballClub>(_AddFootballClub_QNAME, AddFootballClub.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetPersonsByFilter }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateFootballClub }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "getPersonsByFilter")
-    public JAXBElement<GetPersonsByFilter> createGetPersonsByFilter(GetPersonsByFilter value) {
-        return new JAXBElement<GetPersonsByFilter>(_GetPersonsByFilter_QNAME, GetPersonsByFilter.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "updateFootballClub")
+    public JAXBElement<UpdateFootballClub> createUpdateFootballClub(UpdateFootballClub value) {
+        return new JAXBElement<UpdateFootballClub>(_UpdateFootballClub_QNAME, UpdateFootballClub.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UpdatePerson }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateFootballClubResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "updatePerson")
-    public JAXBElement<UpdatePerson> createUpdatePerson(UpdatePerson value) {
-        return new JAXBElement<UpdatePerson>(_UpdatePerson_QNAME, UpdatePerson.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "updateFootballClubResponse")
+    public JAXBElement<UpdateFootballClubResponse> createUpdateFootballClubResponse(UpdateFootballClubResponse value) {
+        return new JAXBElement<UpdateFootballClubResponse>(_UpdateFootballClubResponse_QNAME, UpdateFootballClubResponse.class, null, value);
     }
 
 }

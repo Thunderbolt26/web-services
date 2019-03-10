@@ -10,8 +10,8 @@ public class PostgreSQLDAO {
 
 
 
-    public final static String INSERT_ROW = "INSERT INTO persons(name, surname, patronymic, age) values (?, ?, ?, ?) RETURNING id;";
-    public final static String DELETE_ROW = "DELETE FROM persons WHERE id = ? RETURNING id;";
+    public final static String INSERT_ROW = "INSERT INTO football_clubs(name, country, city, age) values (?, ?, ?, ?) RETURNING id;";
+    public final static String DELETE_ROW = "DELETE FROM football_clubs WHERE id = ? RETURNING id;";
 
     public final static Integer CODE_OK = 0;
     public final static Integer CODE_ERROR = -1;
@@ -19,20 +19,20 @@ public class PostgreSQLDAO {
     public final static Integer CODE_NULL_ARG = -3;
 
 
-    public Integer insertPerson(String name,
-                                String surname,
-                                String patronymic,
+    public Integer insertFootballClub(String name,
+                                String country,
+                                String city,
                                 Integer age) {
         Integer id;
-        if(name == null || surname == null || patronymic == null || age == null) {
+        if(name == null || country == null || city == null || age == null) {
             Logger.getLogger(PostgreSQLDAO.class.getName()).log(Level.SEVERE, "Not valid args");
             return CODE_NULL_ARG;
         }
         try (Connection connection = ConnectionUtil.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_ROW);
             preparedStatement.setString(1, name);
-            preparedStatement.setString(2, surname);
-            preparedStatement.setString(3, patronymic);
+            preparedStatement.setString(2, country);
+            preparedStatement.setString(3, city);
             preparedStatement.setInt(4, age);
             ResultSet rs = preparedStatement.executeQuery();
             if(rs.next()) {
@@ -46,7 +46,7 @@ public class PostgreSQLDAO {
         }
     }
 
-    public Integer deletePerson(Integer id) {
+    public Integer deleteFootballClub(Integer id) {
         try (Connection connection = ConnectionUtil.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(DELETE_ROW);
             preparedStatement.setInt(1, id);
@@ -63,18 +63,18 @@ public class PostgreSQLDAO {
         }
     }
 
-    public Integer updatePerson(Integer id,
+    public Integer updateFootballClub(Integer id,
                                 String name,
-                                String surname,
-                                String patronymic,
+                                String country,
+                                String city,
                                 Integer age) {
 
-        UpdateBuilder queryBuilder = new UpdateBuilder("persons","id");
+        UpdateBuilder queryBuilder = new UpdateBuilder("football_clubs","id");
         System.out.println("id:" + id);
         if (id != null) queryBuilder.addFilter("id", id);
         if (name != null) queryBuilder.addSetter("name", name);
-        if (surname != null) queryBuilder.addSetter("surname", surname);
-        if (patronymic != null) queryBuilder.addSetter("patronymic", patronymic);
+        if (country != null) queryBuilder.addSetter("country", country);
+        if (city != null) queryBuilder.addSetter("city", city);
         if (age != null) queryBuilder.addSetter("age", age);
 
         try (Connection connection = ConnectionUtil.getConnection()) {
@@ -98,18 +98,18 @@ public class PostgreSQLDAO {
         }
     }
 
-    public List<Person> getPersonsByFilters(Integer id,
-                                            String name,
-                                            String surname,
-                                            String patronymic,
-                                            Integer age) {
-        List<Person> persons = new ArrayList<>();
+    public List<FootballClub> getFootballClubsByFilters(Integer id,
+                                                  String name,
+                                                  String country,
+                                                  String city,
+                                                  Integer age) {
+        List<FootballClub> footballClubs = new ArrayList<>();
 
-        QueryBuilder queryBuilder = new QueryBuilder("persons");
+        QueryBuilder queryBuilder = new QueryBuilder("football_clubs");
         if (id != null) queryBuilder.addFilter("id", id);
         if (name != null) queryBuilder.addFilter("name", name);
-        if (surname != null) queryBuilder.addFilter("surname", surname);
-        if (patronymic != null) queryBuilder.addFilter("patronymic", patronymic);
+        if (country != null) queryBuilder.addFilter("country", country);
+        if (city != null) queryBuilder.addFilter("city", city);
         if (age != null) queryBuilder.addFilter("age", age);
 
         try (Connection connection = ConnectionUtil.getConnection()) {
@@ -120,15 +120,15 @@ public class PostgreSQLDAO {
             while (rs.next()) {
                 int resultId = rs.getInt("id");
                 String resultName = rs.getString("name");
-                String resultSurname = rs.getString("surname");
-                String resultPatronymic = rs.getString("patronymic");
+                String resultSurname = rs.getString("country");
+                String resultPatronymic = rs.getString("city");
                 int resultAge = rs.getInt("age");
-                Person person = new Person(resultId, resultName, resultSurname, resultPatronymic, resultAge);
-                persons.add(person);
+                FootballClub footballClub = new FootballClub(resultId, resultName, resultSurname, resultPatronymic, resultAge);
+                footballClubs.add(footballClub);
             }
         } catch (SQLException ex) {
             Logger.getLogger(PostgreSQLDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return persons;
+        return footballClubs;
     }
 }
