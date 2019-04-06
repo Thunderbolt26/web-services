@@ -1,6 +1,5 @@
 package service;
 
-import service.exceptions.FootballClubServiceFault;
 import service.exceptions.FormatException;
 
 import java.text.MessageFormat;
@@ -14,8 +13,7 @@ public class Validator {
         if (s == null) {
             String msg = MessageFormat.format(ERROR_NULL_ARG, field);
             Logger.getLogger(Validator.class.getName()).log(Level.SEVERE, msg);
-            FootballClubServiceFault fault = FootballClubServiceFault.getInstance(msg);
-            throw new FormatException(msg, fault);
+            throw new FormatException(msg);
         }
     }
 }

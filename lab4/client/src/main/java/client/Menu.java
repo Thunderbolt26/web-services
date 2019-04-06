@@ -1,17 +1,26 @@
 package client;
 
-import client.generated.*;
+
+import client.exceptions.ServiceException;
+import com.google.gson.JsonObject;
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.ClientResponse;
+import com.sun.jersey.api.client.GenericType;
+import com.sun.jersey.api.client.WebResource;
+
+import javax.ws.rs.core.MediaType;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.net.URL;
 import java.util.List;
 
 public class Menu {
-    private URL url;
+    private String url;
     private BufferedReader input;
+    private Client client;
 
     public Menu(BufferedReader input) {
+        this.client = Client.create();
         this.input = input;
     }
 
@@ -52,11 +61,12 @@ public class Menu {
             String type = input.readLine();
             switch (type) {
                 case "1":
-                    url = new URL("http://localhost:8080/FootballClubService/?wsdl");
+                    url = "http://localhost:8080/rest/footballclubs";
                     crudMenu();
                     break;
                 case "2":
-                    url = new URL("http://localhost:8080/javaee/FootballClubService?wsdl");
+                    //url = new URL("http://localhost:8080/rest/footballclubs");
+                    url = "http://localhost:8080/javaee/FootballClubService?wsdl";
                     crudMenu();
                     break;
                 case "3":
@@ -154,20 +164,15 @@ public class Menu {
                 }
             }
         }
-        FootballClubService footballService = new FootballClubService(url);
         System.out.println("params: name: " + name + ", country: " + country + ", city: " + city + ", age: " + age);
 
         try {
-            id = footballService.getFootballClubWebServicePort().addFootballClub(name, country, city, age);
-        } catch (DefaultException e) {
-            System.out.println("============Operation failed===========");
-            System.out.println(e.getFaultInfo().getMessage());
-            return;
-        } catch ( FormatException e) {
-            System.out.println("============Operation failed===========");
-            System.out.println(e.getFaultInfo().getMessage());
+            id = addFootballClub(name, country, city, age).getCode();
+        } catch (ServiceException e) {
+            System.out.println(e.getMessage());
             return;
         }
+
         System.out.println("============Result===========");
         System.out.println("New football club's id: " + id);
     }
@@ -243,21 +248,12 @@ public class Menu {
                 }
             }
         }
-        FootballClubService footballClubService = new FootballClubService(url);
+
         Integer status = null;
         try {
-            status = footballClubService.getFootballClubWebServicePort().updateFootballClub(id, name, country, city, age);
-        } catch (DefaultException e) {
-            System.out.println("============Operation failed===========");
-            System.out.println(e.getFaultInfo().getMessage());
-            return;
-        } catch ( FormatException e) {
-            System.out.println("============Operation failed===========");
-            System.out.println(e.getFaultInfo().getMessage());
-            return;
-        } catch (DataNotFoundException e) {
-            System.out.println("============Operation failed===========");
-            System.out.println(e.getFaultInfo().getMessage());
+            status = updateFootballClub(id, name, country, city, age).getCode();
+        } catch (ServiceException e) {
+            System.out.println(e.getMessage());
             return;
         }
 
@@ -273,22 +269,11 @@ public class Menu {
         System.out.println("===Delete football club===");
         id = readId();
 
-        FootballClubService footballClubService = new FootballClubService(url);
-
         Integer status = null;
         try {
-            status = footballClubService.getFootballClubWebServicePort().deleteFootballClub(id);
-        } catch (DefaultException e) {
-            System.out.println("============Operation failed===========");
-            System.out.println(e.getFaultInfo().getMessage());
-            return;
-        } catch ( FormatException e) {
-            System.out.println("============Operation failed===========");
-            System.out.println(e.getFaultInfo().getMessage());
-            return;
-        } catch (DataNotFoundException e) {
-            System.out.println("============Operation failed===========");
-            System.out.println(e.getFaultInfo().getMessage());
+            status = deleteFootballClub(id).getCode();
+        } catch (ServiceException e) {
+            System.out.println(e.getMessage());
             return;
         }
 
@@ -298,7 +283,6 @@ public class Menu {
         else
             System.out.println("Operation failed");
     }
-
 
     private void findFootballClubMenu() throws IOException {
         boolean flag = true;
@@ -362,22 +346,107 @@ public class Menu {
                 }
             }
         }
-        FootballClubService footballClubService = new FootballClubService(url);
-
-        List<FootballClub> footballClubs = null;
+        System.out.println("============Result===========");
         try {
-            footballClubs =
-                    footballClubService.getFootballClubWebServicePort().getFootballClubsByFilter(id, name, country, city, age);
-        } catch (DefaultException e) {
-            System.out.println("============Operation failed===========");
-            System.out.println(e.getFaultInfo().getMessage());
+            printList(getFootballClubs(id, name, country, city, age));
+        } catch (ServiceException e) {
+            System.out.println(e.getMessage());
             return;
         }
-        //System.out.println("id: " + id + ", name: " + name + ", country: " + country + ", city: " + city + ", age: " + age);
-        System.out.println("============Result===========");
-        for (FootballClub footballClub : footballClubs) {
-            System.out.println("id: " + footballClub.getId() + ", name: " + footballClub.getName() + ", country: " + footballClub.getCountry() + ", city: " + footballClub.getCity() + ", age: " + footballClub.getAge());
-        }
-        System.out.println("Total football clubs: " + footballClubs.size());
     }
+
+    private Status addFootballClub(String name, String country, String city, Integer age) throws ServiceException {
+        WebResource webResource = client.resource(url);
+
+        JsonObject footballClub = new JsonObject();
+        if (name != null) footballClub.addProperty("name", name);
+        if (country != null) footballClub.addProperty("country", country);
+        if (city != null) footballClub.addProperty("city", city);
+        if (age != null) footballClub.addProperty("age", age.toString());
+        ClientResponse response = webResource.type(MediaType.APPLICATION_JSON).put(ClientResponse.class, footballClub.toString());
+        //System.out.println(response.toString());
+        if (response.getStatus() != ClientResponse.Status.OK.getStatusCode()) {
+            GenericType<String> type = new GenericType<String>() {
+            };
+            String msg = response.getEntity(type);
+            if (msg != null) throw new ServiceException(msg);
+            else throw new ServiceException("Request failed");
+        }
+        GenericType<Status> type = new GenericType<Status>() {
+        };
+        return response.getEntity(type);
+    }
+
+    private Status updateFootballClub(Integer id, String name, String country, String city, Integer age) throws ServiceException {
+        WebResource webResource = client.resource(url);
+
+        JsonObject footballClub = new JsonObject();
+        if (id != null) footballClub.addProperty("id", id.toString());
+        if (name != null) footballClub.addProperty("name", name);
+        if (country != null) footballClub.addProperty("country", country);
+        if (city != null) footballClub.addProperty("city", city);
+        if (age != null) footballClub.addProperty("age", age.toString());
+        //System.out.println(footballClub.toString());
+        ClientResponse response = webResource.type(MediaType.APPLICATION_JSON).post(ClientResponse.class, footballClub.toString());
+        //System.out.println(response.toString());
+        if (response.getStatus() != ClientResponse.Status.OK.getStatusCode()) {
+            GenericType<String> type = new GenericType<String>() {
+            };
+            String msg = response.getEntity(type);
+            if (msg != null) throw new ServiceException(msg);
+            else throw new ServiceException("Request failed");
+        }
+        GenericType<Status> type = new GenericType<Status>() {
+        };
+        return response.getEntity(type);
+    }
+
+    private Status deleteFootballClub(Integer id) throws ServiceException {
+        WebResource webResource = client.resource(url);
+        JsonObject footballClub = new JsonObject();
+        if (id != null) footballClub.addProperty("id", id.toString());
+        ClientResponse response = webResource.type(MediaType.APPLICATION_JSON).delete(ClientResponse.class, footballClub.toString());
+        if (response.getStatus() != ClientResponse.Status.OK.getStatusCode()) {
+            GenericType<String> type = new GenericType<String>() {
+            };
+            String msg = response.getEntity(type);
+            if (msg != null) throw new ServiceException(msg);
+            else throw new ServiceException("Request failed");
+
+        }
+        GenericType<Status> type = new GenericType<Status>() {
+        };
+        return response.getEntity(type);
+    }
+
+    private List<FootballClub> getFootballClubs(Integer id, String name, String country, String city, Integer age) throws ServiceException {
+        WebResource webResource = client.resource(url);
+
+        if (id != null) webResource = webResource.queryParam("id", id.toString());
+        if (name != null) webResource = webResource.queryParam("name", name);
+        if (country != null) webResource = webResource.queryParam("country", country);
+        if (city != null) webResource = webResource.queryParam("city", city);
+        if (age != null) webResource = webResource.queryParam("age", age.toString());
+
+        ClientResponse response = webResource.accept(MediaType.APPLICATION_JSON).get(ClientResponse.class);
+        if (response.getStatus() != ClientResponse.Status.OK.getStatusCode()) {
+            GenericType<String> type = new GenericType<String>() {
+            };
+            String msg = response.getEntity(type);
+            if (msg != null) throw new ServiceException(msg);
+            else throw new ServiceException("Request failed");
+        }
+        GenericType<List<FootballClub>> type = new GenericType<List<FootballClub>>() {
+        };
+        return response.getEntity(type);
+    }
+
+    private static void printList(List<FootballClub> clubs) {
+        for (FootballClub club : clubs) {
+            System.out.println(club);
+        }
+        System.out.println("Total football clubs: " + clubs.size());
+    }
+
+
 }

@@ -2,7 +2,6 @@ package service;
 
 import service.exceptions.DataNotFoundException;
 import service.exceptions.DefaultException;
-import service.exceptions.FootballClubServiceFault;
 import service.exceptions.FormatException;
 
 import java.sql.*;
@@ -47,10 +46,10 @@ public class PostgreSQLDAO {
                 id = rs.getInt(1);
                 return id;
             }
-            else throw new DefaultException();
+            else throw DefaultException.DEFAULT_INSTANCE;
         } catch (SQLException ex) {
             Logger.getLogger(PostgreSQLDAO.class.getName()).log(Level.SEVERE, null, ex);
-            throw new DefaultException();
+            throw DefaultException.DEFAULT_INSTANCE;
         }
     }
 
@@ -65,13 +64,12 @@ public class PostgreSQLDAO {
                 Integer rc = rs.getInt(1);
                 return CODE_OK;
             } else {
-                FootballClubServiceFault fault = FootballClubServiceFault.getInstance(ERROR_NO_DATA);
-                throw new DataNotFoundException(ERROR_NO_DATA, fault);
+                throw new DataNotFoundException(ERROR_NO_DATA);
                 //return CODE_NO_DATA;
             }
         } catch (SQLException ex) {
             Logger.getLogger(PostgreSQLDAO.class.getName()).log(Level.SEVERE, null, ex);
-            throw new DefaultException();
+            throw DefaultException.DEFAULT_INSTANCE;
         }
     }
 
@@ -98,15 +96,14 @@ public class PostgreSQLDAO {
                 Integer rc = rs.getInt(1);
                 return CODE_OK;
             }
-            else {
-                FootballClubServiceFault fault = FootballClubServiceFault.getInstance(ERROR_NO_DATA);
-                throw new DataNotFoundException(ERROR_NO_DATA, fault);
+            else
+                throw new DataNotFoundException(ERROR_NO_DATA);
                 //return CODE_NO_DATA;
-            }
+
 
         } catch (SQLException ex) {
             Logger.getLogger(PostgreSQLDAO.class.getName()).log(Level.SEVERE, null, ex);
-            throw new DefaultException();
+            throw DefaultException.DEFAULT_INSTANCE;
         }
     }
 
@@ -140,7 +137,7 @@ public class PostgreSQLDAO {
             }
         } catch (SQLException ex) {
             Logger.getLogger(PostgreSQLDAO.class.getName()).log(Level.SEVERE, null, ex);
-            throw new DefaultException();
+            throw DefaultException.DEFAULT_INSTANCE;
         }
         return footballClubs;
     }

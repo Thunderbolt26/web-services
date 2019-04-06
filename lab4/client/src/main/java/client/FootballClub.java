@@ -1,4 +1,4 @@
-package service;
+package client;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -64,6 +64,6 @@ public class FootballClub {
 
     @Override
     public String toString() {
-        return "FootballClub{" + "name=" + name + ", country=" + country + ", city=" + city + ", age=" + age + '}';
+        return "id=" + id + ", name=" + name + ", country=" + country + ", city=" + city + ", age=" + age;
     }
 }

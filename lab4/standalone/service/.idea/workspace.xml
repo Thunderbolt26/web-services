@@ -2,12 +2,96 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a18f7df-1a6a-47f7-bc3c-ae95a9d8d000" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../client/src/main/java/client/FootballClub.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../client/src/main/java/client/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../client/src/main/java/client/exceptions/ServiceException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/exceptions/DataNotFoundExceptionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/exceptions/DefaultExceptionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/exceptions/FormatExceptionMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../lab1/client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lab1/client/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../lab1/javaee/service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lab1/javaee/service/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../lab1/standalone/service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lab1/standalone/service/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../lab2/standalone/service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lab2/standalone/service/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../lab3/client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lab3/client/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../lab3/standalone/service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lab3/standalone/service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/src/main/java/client/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/WebServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/src/main/java/client/WebResourceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/AddFootballClub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/AddFootballClub.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/AddFootballClubResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/AddFootballClubResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/DataNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/DataNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/DefaultException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/DefaultException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/DeleteFootballClub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/DeleteFootballClub.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/DeleteFootballClubResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/DeleteFootballClubResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/FootballClub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/FootballClub.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/FootballClubService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/FootballClubService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/FootballClubServiceFault.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/FootballClubServiceFault.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/FootballClubWebService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/FootballClubWebService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/FormatException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/FormatException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/GetFootballClubsByFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/GetFootballClubsByFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/GetFootballClubsByFilterResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/GetFootballClubsByFilterResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/ObjectFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/ObjectFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/UpdateFootballClub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/UpdateFootballClub.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/UpdateFootballClubResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/UpdateFootballClubResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/package-info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/target/classes/client/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/WebServiceClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/AddFootballClub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/AddFootballClubResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/DataNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/DefaultException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/DeleteFootballClub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/DeleteFootballClubResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/FootballClub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/FootballClubService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/FootballClubServiceFault.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/FootballClubWebService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/FormatException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/GetFootballClubsByFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/GetFootballClubsByFilterResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/ObjectFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/UpdateFootballClub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/UpdateFootballClubResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/package-info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/FootballClub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/FootballClub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/FootballClubWebService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/FootballClubResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/PostgreSQLDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/PostgreSQLDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/exceptions/DataNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/exceptions/DataNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/exceptions/DefaultException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/exceptions/DefaultException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/exceptions/FootballClubServiceFault.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/exceptions/FormatException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/exceptions/FormatException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/FootballClub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/FootballClub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/FootballClubWebService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/PostgreSQLDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/PostgreSQLDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/Validator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/Validator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/exceptions/DataNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/exceptions/DataNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/exceptions/DefaultException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/exceptions/DefaultException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/exceptions/FootballClubServiceFault.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/exceptions/FormatException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/exceptions/FormatException.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,43 +110,168 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="2" />
+          <entry key="class" value="1" />
+          <entry key="java" value="20" />
+          <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="2" />
+          <entry key="CLASS" value="1" />
+          <entry key="JAVA" value="20" />
+          <entry key="XML" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="269" />
+          <entry key="xml" value="19" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="269" />
+          <entry key="XML" value="19" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="85">
+              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/exceptions/FormatException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="93" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/exceptions/DefaultException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="51" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/FootballClubResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/exceptions/DataNotFoundExceptionMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/exceptions/DefaultExceptionMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.17.1/jersey-core-1.17.1.jar!/javax/ws/rs/core/Response.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="156" column="29" selection-start-line="156" selection-start-column="8" selection-end-line="156" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/FootballClub.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-68">
+              <caret line="13" column="23" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/PostgreSQLDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+            <state relative-caret-position="-947">
+              <caret line="48" column="57" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/exceptions/FormatExceptionMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <replaceStrings>
+      <replace>&quot;id&quot;</replace>
+      <replace>&quot;name&quot;</replace>
+      <replace>&quot;country&quot;</replace>
+      <replace>&quot;sity&quot;</replace>
+      <replace>&quot;age&quot;</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="952" />
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/service/FootballClub.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/exceptions/FormatException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/exceptions/DataNotFoundException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/exceptions/DataNotFoundExceptionMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/exceptions/FormatExceptionMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/Validator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/exceptions/DefaultException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/PostgreSQLDAO.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/service/Status.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/FootballClubResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/exceptions/DefaultExceptionMapper.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
     <option name="width" value="977" />
     <option name="height" value="1088" />
   </component>
@@ -110,6 +319,15 @@
               <item name="standalone-service" type="b2602c69:ProjectViewProjectNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="standalone-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -126,10 +344,16 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554578740964" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554594431333" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="service" />
+      <recent name="service.exceptions" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -243,15 +467,15 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15369128" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21946308" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Messages" weight="0.32885906" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32885906" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3261745" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.43355703" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -270,17 +494,138 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/PostgreSQLDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/FootballClubWebService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+        <state relative-caret-position="85">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/exceptions/DataNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="88" selection-start-line="4" selection-start-column="88" selection-end-line="4" selection-end-column="88" />
+          <folding>
+            <element signature="e#207#208#0" expanded="true" />
+            <element signature="e#237#238#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/Validator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="79" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/exceptions/FootballClubServiceFault.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/Status.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="9" selection-end-column="5" />
+          <folding>
+            <element signature="e#191#192#0" expanded="true" />
+            <element signature="e#215#216#0" expanded="true" />
+            <element signature="e#229#230#0" expanded="true" />
+            <element signature="e#256#257#0" expanded="true" />
+            <element signature="e#297#298#0" expanded="true" />
+            <element signature="e#329#330#0" expanded="true" />
+            <element signature="e#244#245#0" expanded="true" />
+            <element signature="e#284#285#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/FootballClub.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/FootballClubResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/App.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/exceptions/FormatException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/exceptions/DefaultException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="51" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/exceptions/DataNotFoundExceptionMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.17.1/jersey-core-1.17.1.jar!/javax/ws/rs/core/Response.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="156" column="29" selection-start-line="156" selection-start-column="8" selection-end-line="156" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/exceptions/DefaultExceptionMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/exceptions/FormatExceptionMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/PostgreSQLDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-947">
+          <caret line="48" column="57" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -361,7 +706,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: com.sun.xml.bind:jaxb-impl:2.4.0-b180830.0438</last-edited>
+          <last-edited>Maven: asm:asm:3.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
