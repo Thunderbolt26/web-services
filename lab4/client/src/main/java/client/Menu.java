@@ -66,7 +66,7 @@ public class Menu {
                     break;
                 case "2":
                     //url = new URL("http://localhost:8080/rest/footballclubs");
-                    url = "http://localhost:8080/javaee/FootballClubService?wsdl";
+                    url = "http://localhost:8080/javaee_war_exploded/rest/footballclubs";
                     crudMenu();
                     break;
                 case "3":
@@ -405,7 +405,9 @@ public class Menu {
         WebResource webResource = client.resource(url);
         JsonObject footballClub = new JsonObject();
         if (id != null) footballClub.addProperty("id", id.toString());
+        //System.out.println(footballClub.toString());
         ClientResponse response = webResource.type(MediaType.APPLICATION_JSON).delete(ClientResponse.class, footballClub.toString());
+        //System.out.println(response.toString());
         if (response.getStatus() != ClientResponse.Status.OK.getStatusCode()) {
             GenericType<String> type = new GenericType<String>() {
             };

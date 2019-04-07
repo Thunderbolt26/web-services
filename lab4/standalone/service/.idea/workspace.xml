@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a18f7df-1a6a-47f7-bc3c-ae95a9d8d000" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../client/src/main/java/client/FootballClub.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../client/src/main/java/client/Status.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../client/src/main/java/client/exceptions/ServiceException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/Status.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/exceptions/DataNotFoundExceptionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/exceptions/DefaultExceptionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/exceptions/FormatExceptionMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../lab1/client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lab1/client/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../lab1/javaee/service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lab1/javaee/service/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../lab1/standalone/service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lab1/standalone/service/.idea/workspace.xml" afterDir="false" />
@@ -16,82 +9,13 @@
       <change beforePath="$PROJECT_DIR$/../../../lab3/client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lab3/client/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../lab3/standalone/service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lab3/standalone/service/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/src/main/java/client/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/WebServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/src/main/java/client/WebResourceClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/AddFootballClub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/AddFootballClub.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/AddFootballClubResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/AddFootballClubResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/DataNotFoundException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/DataNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/DefaultException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/DefaultException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/DeleteFootballClub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/DeleteFootballClub.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/DeleteFootballClubResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/DeleteFootballClubResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/FootballClub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/FootballClub.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/FootballClubService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/FootballClubService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/FootballClubServiceFault.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/FootballClubServiceFault.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/FootballClubWebService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/FootballClubWebService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/FormatException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/FormatException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/GetFootballClubsByFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/GetFootballClubsByFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/GetFootballClubsByFilterResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/GetFootballClubsByFilterResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/ObjectFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/ObjectFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/UpdateFootballClub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/UpdateFootballClub.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/UpdateFootballClubResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/UpdateFootballClubResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/package-info.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/src/main/java/client/generated/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/Menu$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/target/classes/client/Menu$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/Menu$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/target/classes/client/Menu$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/Menu$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/target/classes/client/Menu$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/Menu$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/target/classes/client/Menu$8.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/target/classes/client/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/WebServiceClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/AddFootballClub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/AddFootballClubResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/DataNotFoundException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/DefaultException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/DeleteFootballClub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/DeleteFootballClubResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/FootballClub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/FootballClubService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/FootballClubServiceFault.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/FootballClubWebService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/FormatException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/GetFootballClubsByFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/GetFootballClubsByFilterResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/ObjectFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/UpdateFootballClub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/UpdateFootballClubResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/target/classes/client/generated/package-info.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/FootballClub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/FootballClub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/FootballClubWebService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/FootballClubResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/PostgreSQLDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/PostgreSQLDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/Validator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/exceptions/DataNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/exceptions/DataNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/exceptions/DefaultException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/exceptions/DefaultException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/exceptions/FootballClubServiceFault.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/exceptions/FormatException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/exceptions/FormatException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/FootballClub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/FootballClub.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/FootballClubWebService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/PostgreSQLDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/PostgreSQLDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/Validator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/Validator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/exceptions/DataNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/exceptions/DataNotFoundException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/exceptions/DefaultException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/exceptions/DefaultException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/exceptions/FootballClubServiceFault.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/exceptions/FormatException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/exceptions/FormatException.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -104,6 +28,7 @@
     <session id="-1056385134">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -138,11 +63,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+            <state relative-caret-position="204">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -219,7 +144,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/PostgreSQLDAO.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-947">
@@ -319,15 +244,6 @@
               <item name="standalone-service" type="b2602c69:ProjectViewProjectNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="standalone-service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -344,7 +260,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554594431333" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554600587168" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -467,7 +383,7 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21946308" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21946308" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
@@ -475,7 +391,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.32885906" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3261745" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.43355703" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43355703" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -567,16 +483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/exceptions/FormatException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -626,6 +532,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-947">
           <caret line="48" column="57" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
