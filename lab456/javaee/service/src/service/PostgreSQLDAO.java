@@ -1,0 +1,146 @@
+package service;
+
+import service.exceptions.DataNotFoundException;
+import service.exceptions.DefaultException;
+import service.exceptions.FormatException;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class PostgreSQLDAO {
+
+    private final Connection connection;
+
+    public final static String INSERT_ROW = "INSERT INTO football_clubs(name, country, city, age) values (?, ?, ?, ?) RETURNING id;";
+    public final static String DELETE_ROW = "DELETE FROM football_clubs WHERE id = ? RETURNING id;";
+
+    public final static Integer CODE_OK = 0;
+    //public final static Integer CODE_ERROR = -1;
+    //public final static Integer CODE_NO_DATA = -2;
+    //public final static Integer CODE_NULL_ARG = -3;
+
+    public final static String ERROR_NO_DATA = "No data found for specified id";
+
+    public PostgreSQLDAO(Connection connection) {
+        this.connection = connection;
+    }
+
+    public Integer insertFootballClub(String name,
+                                String country,
+                                String city,
+                                Integer age) throws FormatException,DefaultException {
+        Integer id;
+        Validator.NotNull(name, "name");
+        Validator.NotNull(country, "country");
+        Validator.NotNull(city, "city");
+        Validator.NotNull(age, "age");
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_ROW);
+            preparedStatement.setString(1, name);
+            preparedStatement.setString(2, country);
+            preparedStatement.setString(3, city);
+            preparedStatement.setInt(4, age);
+            ResultSet rs = preparedStatement.executeQuery();
+            if(rs.next()) {
+                id = rs.getInt(1);
+                return id;
+            }
+            else throw DefaultException.DEFAULT_INSTANCE;
+        } catch (SQLException ex) {
+            Logger.getLogger(PostgreSQLDAO.class.getName()).log(Level.SEVERE, null, ex);
+            throw DefaultException.DEFAULT_INSTANCE;
+        }
+    }
+
+    public Integer deleteFootballClub(Integer id) throws FormatException, DataNotFoundException, DefaultException{
+        Validator.NotNull(id, "id");
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(DELETE_ROW);
+            preparedStatement.setInt(1, id);
+            //rc = preparedStatement.executeUpdate();
+            ResultSet rs = preparedStatement.executeQuery();
+            if(rs.next()) {
+                Integer rc = rs.getInt(1);
+                return CODE_OK;
+            } else {
+                throw new DataNotFoundException(ERROR_NO_DATA);
+                //return CODE_NO_DATA;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(PostgreSQLDAO.class.getName()).log(Level.SEVERE, null, ex);
+            throw DefaultException.DEFAULT_INSTANCE;
+        }
+    }
+
+    public Integer updateFootballClub(Integer id,
+                                String name,
+                                String country,
+                                String city,
+                                Integer age) throws FormatException, DataNotFoundException, DefaultException{
+        Validator.NotNull(id, "id");
+        UpdateBuilder queryBuilder = new UpdateBuilder("football_clubs","id");
+        queryBuilder.addFilter("id", id);
+        if (name != null) queryBuilder.addSetter("name", name);
+        if (country != null) queryBuilder.addSetter("country", country);
+        if (city != null) queryBuilder.addSetter("city", city);
+        if (age != null) queryBuilder.addSetter("age", age);
+
+        try  {
+            Statement stmt = connection.createStatement();
+            String s = queryBuilder.query();
+            if(s == null) return -1;
+            Logger.getLogger(PostgreSQLDAO.class.getName()).log(Level.SEVERE, s);
+            ResultSet rs = stmt.executeQuery(s);
+            if(rs.next()) {
+                Integer rc = rs.getInt(1);
+                return CODE_OK;
+            }
+            else
+                throw new DataNotFoundException(ERROR_NO_DATA);
+                //return CODE_NO_DATA;
+
+
+        } catch (SQLException ex) {
+            Logger.getLogger(PostgreSQLDAO.class.getName()).log(Level.SEVERE, null, ex);
+            throw DefaultException.DEFAULT_INSTANCE;
+        }
+    }
+
+    public List<FootballClub> getFootballClubsByFilters(Integer id,
+                                                  String name,
+                                                  String country,
+                                                  String city,
+                                                  Integer age) throws DefaultException{
+        List<FootballClub> footballClubs = new ArrayList<>();
+
+        QueryBuilder queryBuilder = new QueryBuilder("football_clubs");
+        if (id != null) queryBuilder.addFilter("id", id);
+        if (name != null) queryBuilder.addFilter("name", name);
+        if (country != null) queryBuilder.addFilter("country", country);
+        if (city != null) queryBuilder.addFilter("city", city);
+        if (age != null) queryBuilder.addFilter("age", age);
+
+        try {
+            Statement stmt = connection.createStatement();
+            String s = queryBuilder.query();
+            Logger.getLogger(PostgreSQLDAO.class.getName()).log(Level.FINE, s);
+            ResultSet rs = stmt.executeQuery(s);
+            while (rs.next()) {
+                int resultId = rs.getInt("id");
+                String resultName = rs.getString("name");
+                String resultSurname = rs.getString("country");
+                String resultPatronymic = rs.getString("city");
+                int resultAge = rs.getInt("age");
+                FootballClub footballClub = new FootballClub(resultId, resultName, resultSurname, resultPatronymic, resultAge);
+                footballClubs.add(footballClub);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(PostgreSQLDAO.class.getName()).log(Level.SEVERE, null, ex);
+            throw DefaultException.DEFAULT_INSTANCE;
+        }
+        return footballClubs;
+    }
+}
