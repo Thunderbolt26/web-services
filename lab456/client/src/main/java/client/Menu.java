@@ -7,6 +7,7 @@ import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.GenericType;
 import com.sun.jersey.api.client.WebResource;
+import com.sun.jersey.core.util.Base64;
 
 import javax.ws.rs.core.MediaType;
 
@@ -18,6 +19,9 @@ public class Menu {
     private String url;
     private BufferedReader input;
     private Client client;
+    private String username;
+    private String password;
+    private String encodeAuthValue;
 
     public Menu(BufferedReader input) {
         this.client = Client.create();
@@ -62,14 +66,40 @@ public class Menu {
             switch (type) {
                 case "1":
                     url = "http://localhost:8080/rest/footballclubs";
-                    crudMenu();
+                    authMenu();
                     break;
                 case "2":
                     //url = new URL("http://localhost:8080/rest/footballclubs");
                     url = "http://localhost:8080/javaee_war_exploded/rest/footballclubs";
-                    crudMenu();
+                    authMenu();
                     break;
                 case "3":
+                    flag = false;
+                    break;
+                default:
+                    again();
+            }
+        }
+    }
+
+    private void authMenu() throws IOException {
+        boolean flag = true;
+        System.out.println("Choose one of service");
+        while (flag) {
+            System.out.println("1. Sign in");
+            System.out.println("2. Exit");
+            System.out.print("Print number: ");
+            String type = input.readLine();
+            switch (type) {
+                case "1":
+                    System.out.println("Enter username");
+                    username = input.readLine();
+                    System.out.println("Enter password");
+                    password = input.readLine();
+                    encodeAuthValue = encodeCredits();
+                    crudMenu();
+                    break;
+                case "2":
                     flag = false;
                     break;
                 default:
@@ -363,7 +393,8 @@ public class Menu {
         if (country != null) footballClub.addProperty("country", country);
         if (city != null) footballClub.addProperty("city", city);
         if (age != null) footballClub.addProperty("age", age.toString());
-        ClientResponse response = webResource.type(MediaType.APPLICATION_JSON).put(ClientResponse.class, footballClub.toString());
+        ClientResponse response = webResource.type(MediaType.APPLICATION_JSON).header("authorization", encodeAuthValue).put(ClientResponse.class, footballClub.toString());
+
         //System.out.println(response.toString());
         if (response.getStatus() != ClientResponse.Status.OK.getStatusCode()) {
             GenericType<String> type = new GenericType<String>() {
@@ -387,7 +418,7 @@ public class Menu {
         if (city != null) footballClub.addProperty("city", city);
         if (age != null) footballClub.addProperty("age", age.toString());
         //System.out.println(footballClub.toString());
-        ClientResponse response = webResource.type(MediaType.APPLICATION_JSON).post(ClientResponse.class, footballClub.toString());
+        ClientResponse response = webResource.type(MediaType.APPLICATION_JSON).header("authorization", encodeAuthValue).post(ClientResponse.class, footballClub.toString());
         //System.out.println(response.toString());
         if (response.getStatus() != ClientResponse.Status.OK.getStatusCode()) {
             GenericType<String> type = new GenericType<String>() {
@@ -406,7 +437,7 @@ public class Menu {
         JsonObject footballClub = new JsonObject();
         if (id != null) footballClub.addProperty("id", id.toString());
         //System.out.println(footballClub.toString());
-        ClientResponse response = webResource.type(MediaType.APPLICATION_JSON).delete(ClientResponse.class, footballClub.toString());
+        ClientResponse response = webResource.type(MediaType.APPLICATION_JSON).header("authorization", encodeAuthValue).delete(ClientResponse.class, footballClub.toString());
         //System.out.println(response.toString());
         if (response.getStatus() != ClientResponse.Status.OK.getStatusCode()) {
             GenericType<String> type = new GenericType<String>() {
@@ -430,7 +461,8 @@ public class Menu {
         if (city != null) webResource = webResource.queryParam("city", city);
         if (age != null) webResource = webResource.queryParam("age", age.toString());
 
-        ClientResponse response = webResource.accept(MediaType.APPLICATION_JSON).get(ClientResponse.class);
+        ClientResponse response = webResource.header("authorization", encodeAuthValue).accept(MediaType.APPLICATION_JSON).get(ClientResponse.class);
+        //ClientResponse response = webResource.accept(MediaType.APPLICATION_JSON).get(ClientResponse.class);
         if (response.getStatus() != ClientResponse.Status.OK.getStatusCode()) {
             GenericType<String> type = new GenericType<String>() {
             };
@@ -448,6 +480,10 @@ public class Menu {
             System.out.println(club);
         }
         System.out.println("Total football clubs: " + clubs.size());
+    }
+
+    private String encodeCredits() {
+        return "Basic " + new String(Base64.encode(username + ":" + password));
     }
 
 
