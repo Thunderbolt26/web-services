@@ -21,7 +21,10 @@ public class FootballClubResource {
             @QueryParam("country") String country,
             @QueryParam("city") String city,
             @QueryParam("age") Integer age) throws DefaultException {
-
+        //for testing limit of connection
+        /*while(true) {
+            if(id != null && id == 122) break;
+        }*/
         PostgreSQLDAO dao = new PostgreSQLDAO();
         List<FootballClub> footballClubs = dao.getFootballClubsByFilters(id, name, country, city, age);
         return footballClubs;

@@ -9,7 +9,12 @@ import javax.xml.ws.Endpoint;
 import java.io.IOException;
 import java.net.URI;
 
+import org.glassfish.grizzly.Grizzly;
 import org.glassfish.grizzly.http.server.HttpServer;
+import org.glassfish.grizzly.http.server.NetworkListener;
+import org.glassfish.grizzly.nio.transport.TCPNIOTransport;
+import org.glassfish.grizzly.nio.transport.TCPNIOTransportBuilder;
+import org.glassfish.grizzly.threadpool.ThreadPoolConfig;
 
 public class App {
 
@@ -21,7 +26,9 @@ public class App {
             ResourceConfig resourceConfig = new PackagesResourceConfig(FootballClubResource.class.getPackage().getName());
             //ResourceConfig resourceConfig = new ClassNamesResourceConfig(FootballClubResource.class);
             resourceConfig.getProperties().put("com.sun.jersey.spi.container.ContainerRequestFilters",
-                    "service.AuthFilter");
+                    "service.ThrottlingFilter,service.AuthFilter");
+            resourceConfig.getProperties().put("com.sun.jersey.spi.container.ContainerResponseFilters",
+                    "service.CloseFilter");
             server = GrizzlyServerFactory.createHttpServer(BASE_URI, resourceConfig);
             server.start();
             System.in.read();

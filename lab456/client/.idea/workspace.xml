@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c491c5a-f35f-4c9a-862d-ba2cd9bd3176" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../standalone/service/src/main/java/service/ThrottlingLogic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../standalone/service/src/main/java/service/exceptions/ThrottlingException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../standalone/service/src/main/java/service/exceptions/ThrottlingExceptionMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lab1/client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab1/client/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lab1/javaee/service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab1/javaee/service/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lab1/standalone/service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab1/standalone/service/.idea/workspace.xml" afterDir="false" />
@@ -179,15 +182,16 @@
       <change beforePath="$PROJECT_DIR$/../../lab4/standalone/service/target/classes/service/exceptions/FormatException.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lab4/standalone/service/target/classes/service/exceptions/FormatExceptionMapper.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/client/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../javaee/service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../javaee/service/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaee/service/out/artifacts/javaee_war_exploded/WEB-INF/classes/service/FootballClubResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/../javaee/service/out/artifacts/javaee_war_exploded/WEB-INF/classes/service/FootballClubResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaee/service/out/artifacts/javaee_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../javaee/service/out/artifacts/javaee_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaee/service/out/production/javaee/service/FootballClubResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/../javaee/service/out/production/javaee/service/FootballClubResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaee/service/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../javaee/service/web/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../standalone/service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../standalone/service/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../standalone/service/src/main/java/service/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../standalone/service/src/main/java/service/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../standalone/service/src/main/java/service/FootballClubResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../standalone/service/src/main/java/service/FootballClubResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../standalone/service/src/main/java/service/exceptions/DataNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../standalone/service/src/main/java/service/exceptions/DataNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../standalone/service/target/classes/service/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../standalone/service/target/classes/service/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../standalone/service/target/classes/service/AuthFilter$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../standalone/service/target/classes/service/AuthFilter$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../standalone/service/target/classes/service/AuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../standalone/service/target/classes/service/AuthFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../standalone/service/target/classes/service/FootballClubResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/../standalone/service/target/classes/service/FootballClubResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../standalone/service/target/classes/service/exceptions/DataNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../standalone/service/target/classes/service/exceptions/DataNotFoundException.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -200,10 +204,12 @@
     <session id="2125299850">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.36" value="1" />
+          <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.57" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -245,7 +251,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/client/WebResourceClient.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -253,12 +259,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/client/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="464" column="10" selection-start-line="464" selection-start-column="10" selection-end-line="464" selection-end-column="10" />
-              <folding>
-                <element signature="e#18187#18188#0" expanded="true" />
-                <element signature="e#18249#18250#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-6202">
+              <caret line="77" column="26" lean-forward="true" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -266,12 +268,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.19/jersey-core-1.19.jar!/com/sun/jersey/core/util/Base64.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
+            <state relative-caret-position="2533">
               <caret line="154" column="25" selection-start-line="154" selection-start-column="25" selection-end-line="154" selection-end-column="25" />
-              <folding>
-                <element signature="e#5770#5771#0" expanded="true" />
-                <element signature="e#5816#5817#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -288,10 +286,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
-    <option name="height" value="1088" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="950" />
+    <option name="width" value="979" />
+    <option name="height" value="1090" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -299,8 +297,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -334,11 +332,20 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -451,9 +458,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12483221" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18993288" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -495,29 +503,21 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/client/WebResourceClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.19/jersey-core-1.19.jar!/com/sun/jersey/core/util/Base64.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
+        <state relative-caret-position="2533">
           <caret line="154" column="25" selection-start-line="154" selection-start-column="25" selection-end-line="154" selection-end-column="25" />
-          <folding>
-            <element signature="e#5770#5771#0" expanded="true" />
-            <element signature="e#5816#5817#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/client/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="464" column="10" selection-start-line="464" selection-start-column="10" selection-end-line="464" selection-end-column="10" />
-          <folding>
-            <element signature="e#18187#18188#0" expanded="true" />
-            <element signature="e#18249#18250#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-6202">
+          <caret line="77" column="26" lean-forward="true" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
         </state>
       </provider>
     </entry>
