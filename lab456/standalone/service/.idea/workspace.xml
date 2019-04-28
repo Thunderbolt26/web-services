@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0952c28-cb19-42f8-9788-01e4816da271" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/ThrottlingLogic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/exceptions/ThrottlingException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/exceptions/ThrottlingExceptionMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../lab1/client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lab1/client/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../lab1/javaee/service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lab1/javaee/service/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../lab1/standalone/service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lab1/standalone/service/.idea/workspace.xml" afterDir="false" />
@@ -181,17 +178,8 @@
       <change beforePath="$PROJECT_DIR$/../../../lab4/standalone/service/target/classes/service/exceptions/DefaultExceptionMapper.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../lab4/standalone/service/target/classes/service/exceptions/FormatException.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../lab4/standalone/service/target/classes/service/exceptions/FormatExceptionMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../javaee/service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../javaee/service/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/FootballClubResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/FootballClubResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/exceptions/DataNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/exceptions/DataNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/AuthFilter$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/AuthFilter$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/AuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/AuthFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/FootballClubResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/FootballClubResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/exceptions/DataNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/exceptions/DataNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/ThrottlingLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ThrottlingLogic.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -228,12 +216,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1132" />
+          <entry key="java" value="1180" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1132" />
+          <entry key="JAVA" value="1180" />
         </counts>
       </usages-collector>
     </session>
@@ -274,8 +262,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/ThrottlingLogic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="350">
+              <caret line="23" column="87" selection-start-line="23" selection-start-column="87" selection-end-line="23" selection-end-column="87" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -372,15 +360,15 @@
         <option value="$PROJECT_DIR$/src/main/java/service/exceptions/ThrottlingLogic.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/CloseFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/exceptions/ThrottlingException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/ThrottlingLogic.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/ThrottlingFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/exceptions/ThrottlingExceptionMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/FootballClubResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/ThrottlingLogic.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="950" />
     <option name="width" value="979" />
     <option name="height" value="1090" />
@@ -443,7 +431,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556474156490" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556475671806" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -558,7 +546,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30536914" />
@@ -775,8 +763,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/ThrottlingLogic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="350">
+          <caret line="23" column="87" selection-start-line="23" selection-start-column="87" selection-end-line="23" selection-end-column="87" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

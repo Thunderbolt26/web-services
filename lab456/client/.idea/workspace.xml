@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c491c5a-f35f-4c9a-862d-ba2cd9bd3176" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../standalone/service/src/main/java/service/ThrottlingLogic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../standalone/service/src/main/java/service/exceptions/ThrottlingException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../standalone/service/src/main/java/service/exceptions/ThrottlingExceptionMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lab1/client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab1/client/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lab1/javaee/service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab1/javaee/service/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lab1/standalone/service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab1/standalone/service/.idea/workspace.xml" afterDir="false" />
@@ -181,17 +178,8 @@
       <change beforePath="$PROJECT_DIR$/../../lab4/standalone/service/target/classes/service/exceptions/DefaultExceptionMapper.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lab4/standalone/service/target/classes/service/exceptions/FormatException.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lab4/standalone/service/target/classes/service/exceptions/FormatExceptionMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../javaee/service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../javaee/service/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../standalone/service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../standalone/service/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../standalone/service/src/main/java/service/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../standalone/service/src/main/java/service/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../standalone/service/src/main/java/service/FootballClubResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../standalone/service/src/main/java/service/FootballClubResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../standalone/service/src/main/java/service/exceptions/DataNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../standalone/service/src/main/java/service/exceptions/DataNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../standalone/service/target/classes/service/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../standalone/service/target/classes/service/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../standalone/service/target/classes/service/AuthFilter$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../standalone/service/target/classes/service/AuthFilter$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../standalone/service/target/classes/service/AuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../standalone/service/target/classes/service/AuthFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../standalone/service/target/classes/service/FootballClubResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/../standalone/service/target/classes/service/FootballClubResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../standalone/service/target/classes/service/exceptions/DataNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../standalone/service/target/classes/service/exceptions/DataNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../standalone/service/src/main/java/service/ThrottlingLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/../standalone/service/src/main/java/service/ThrottlingLogic.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -459,7 +447,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="7" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18993288" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
