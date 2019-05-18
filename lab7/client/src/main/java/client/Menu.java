@@ -1,6 +1,8 @@
 package client;
 
 import client.generated.*;
+import client.juddi.Publisher;
+import client.juddi.ValidationException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -37,11 +39,108 @@ public class Menu {
     }
 
     private void again() {
-
         System.out.println("Choose again");
     }
 
     public void execute() throws IOException {
+        boolean flag = true;
+        System.out.println("Choose one of the options:");
+        while (flag) {
+            System.out.println("1. Registration");
+            System.out.println("2. Search");
+            System.out.println("3. Exit");
+            System.out.print("Print number: ");
+            String type = input.readLine();
+            switch (type) {
+                case "1":
+                    registrationMenu();
+                    break;
+                case "2":
+                    url = new URL("http://localhost:8090/javaee/FootballClubService?wsdl");
+                    crudMenu();
+                    break;
+                case "3":
+                    flag = false;
+                    break;
+                default:
+                    again();
+            }
+        }
+    }
+
+    public void registrationMenu() throws IOException {
+        boolean flag = true;
+        Publisher.PublishBuilder builder = Publisher.builder();
+        Publisher publisher = null;
+        String userId;
+        String cred;
+        String businessName;
+        String serviceName;
+        String wsdl;
+
+        System.out.println("Enter all vars:");
+        while (flag) {
+            System.out.println("1. User Id");
+            System.out.println("2. Password");
+            System.out.println("3. Business Name");
+            System.out.println("4. Service Name");
+            System.out.println("5. wsdl");
+            System.out.println("6. Submit");
+            System.out.println("7. Exit");
+            System.out.print("Print number: ");
+            String type = input.readLine();
+            switch (type) {
+                case "1":
+                    System.out.println("User Id: ");
+                    userId = input.readLine();
+                    builder.setUserId(userId);
+                    break;
+                case "2":
+                    System.out.println("Password: ");
+                    cred = input.readLine();
+                    builder.setCred(cred);
+                    break;
+                case "3":
+                    System.out.println("Business Name: ");
+                    businessName = input.readLine();
+                    builder.setBusinessName(businessName);
+                    break;
+                case "4":
+                    System.out.println("Service Name: ");
+                    serviceName = input.readLine();
+                    builder.setServiceName(serviceName);
+                    break;
+                case "5":
+                    System.out.println("wsdl: ");
+                    wsdl = input.readLine();
+                    builder.setWsdl(wsdl);
+                    break;
+                case "6":
+                    System.out.println(builder);
+                    System.out.println("Submitting... ");
+
+                    try {
+                        publisher = builder.build();
+                    } catch (ValidationException e) {
+                        System.out.println(e.getMessage());
+                        break;
+                    }
+
+                    int rc = publisher.publish();
+                    if(rc == publisher.CODE_ERR) {
+                        System.out.println("Submit is not successful");
+                    } else System.out.println("Success!");
+                    break;
+                case "7":
+                    flag = false;
+                    break;
+                default:
+                    again();
+            }
+        }
+    }
+
+    public void execute1() throws IOException {
         boolean flag = true;
         System.out.println("Choose one of service realization:");
         while (flag) {
@@ -100,6 +199,8 @@ public class Menu {
             }
         }
     }
+
+
 
     private void addFootballClubMenu() throws IOException {
         boolean flag = true;
