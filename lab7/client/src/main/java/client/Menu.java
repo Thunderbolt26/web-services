@@ -1,6 +1,8 @@
 package client;
 
 import client.generated.*;
+import client.juddi.Browser;
+import client.juddi.BrowserQuery;
 import client.juddi.Publisher;
 import client.juddi.ValidationException;
 
@@ -56,8 +58,7 @@ public class Menu {
                     registrationMenu();
                     break;
                 case "2":
-                    url = new URL("http://localhost:8090/javaee/FootballClubService?wsdl");
-                    crudMenu();
+                    searchMenu();
                     break;
                 case "3":
                     flag = false;
@@ -140,25 +141,73 @@ public class Menu {
         }
     }
 
-    public void execute1() throws IOException {
+    public void searchMenu() throws IOException {
         boolean flag = true;
-        System.out.println("Choose one of service realization:");
+        Browser br = new Browser();
+        BrowserQuery.Subject subject;
+        String searchString;
+        BrowserQuery query = null;
+        System.out.println("Choose subject to searching");
         while (flag) {
-            System.out.println("1. Standalone");
-            System.out.println("2. JavaEE");
-            System.out.println("3. Exit");
+            System.out.println("1. Business");
+            System.out.println("2. Service");
+            System.out.println("3. WSDL");
+            System.out.println("4. Exit");
             System.out.print("Print number: ");
             String type = input.readLine();
             switch (type) {
                 case "1":
-                    url = new URL("http://localhost:8090/FootballClubService/?wsdl");
+                    System.out.println("Search business. Enter string for approximateMatch by Name:");
+                    subject = BrowserQuery.Subject.BUSINESS;
+                    searchString = input.readLine();
+                    query = new BrowserQuery(subject, searchString);
+                    br.browse(query);
+                    break;
+                case "2":
+                    System.out.println("Search service. Enter string for approximateMatch by Name:");
+                    subject = BrowserQuery.Subject.SERVICE;
+                    searchString = input.readLine();
+                    query = new BrowserQuery(subject, searchString);
+                    br.browse(query);
+                    break;
+                case "3":
+                    System.out.println("Search and call WSDL by ServiceKey. Enter key of service:");
+                    subject = BrowserQuery.Subject.WSDL;
+                    searchString = input.readLine();
+                    query = new BrowserQuery(subject, searchString);
+                    br.browse(query);
+                    //url = new URL("http://localhost:8090/FootballClubService/?wsdl");
+                    if(br.wsdl!=null){
+                        System.out.println("Founded WSDL: " + br.wsdl);
+                        wsdlMenu(br.wsdl);
+                    } else {
+                        System.out.println("WSDL is not founded");
+                    }
+                    break;
+                case "4":
+                    flag = false;
+                    break;
+                default:
+                    again();
+            }
+        }
+    }
+
+    public void wsdlMenu(String wsdl) throws IOException {
+        boolean flag = true;
+        url = new URL(wsdl);
+        while (flag) {
+            System.out.println("Use wsdl " + wsdl + " to call service");
+            System.out.println("1. Yes");
+            System.out.println("2. No");
+            System.out.print("Print number: ");
+            String type = input.readLine();
+            switch (type) {
+                case "1":
+                    System.out.println("Calling wsdl... ");
                     crudMenu();
                     break;
                 case "2":
-                    url = new URL("http://localhost:8090/javaee/FootballClubService?wsdl");
-                    crudMenu();
-                    break;
-                case "3":
                     flag = false;
                     break;
                 default:
